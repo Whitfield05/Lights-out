@@ -1,0 +1,63 @@
+body {
+	background-color:beige;
+}
+
+.sober {
+	background-image: url(JAG1.jpg);
+	background-size: cover;
+	width: 145px;
+	height: 145px;
+	border-color: Yellow;
+	border-width: thick;
+	margin-right: 8px;
+	margin-bottom: 10px;
+	
+}
+.sober:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.drunk{
+	background-image: url(JAG2.jpg);
+	background-size: cover;
+	width: 145px;
+	height: 145px;
+	border-color: black;
+	border-width: thick;
+	margin-right: 8px;
+	margin-bottom: 10px;
+}
+.drunk:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.testclass{
+	background-color: beige;
+	width: 145px;
+	height: 145px;
+	margin-right: 8px;
+	margin-bottom: 10px;
+	
+}
+.testclass:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#Timer{
+	width: 100px;
+
+}
+#leftbox{
+	float: left;
+	width: 10%;
+}
+#middlebox{
+	float: left;
+	width: 65%;
+}
+#rightbox{
+	background-color: white;
+	font-size: 26px;
+	border: solid;
+	border-color: grey;
+	border-width: thin;
+	width: 24%;
+	float: left;
+}
