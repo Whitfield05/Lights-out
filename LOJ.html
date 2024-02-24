@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BOTTOMS UP JOSIAH</title>
+		<link rel="stylesheet" href="LOJ.css" type="text/css">
+	</head>
+	<body>
+		<header><b><em>	BLACK OUT JOSIAH</em></b><span style="color: red"> Alpha</span></em></r></header>
+		<div>
+		<div id="leftbox">
+		<button onclick="startgame()">Begin New Game</button><br>
+		</div>
+		<div id="middlebox">
+		<div class="flex-parent jc-center">
+		<button id="button1" class="testclass" onclick="press(this); bca2(); bcb1(); wincheck()" ></button>
+		<button id="button2" class="testclass" onclick="press(this); bca1(); bca3(); bcb2(); wincheck()" ></button>
+		<button id="button3" class="testclass" onclick="press(this); bca2(); bca4(); bcb3(); wincheck()" ></button>
+		<button id="button4" class="testclass" onclick="press(this); bca3(); bca5(); bcb4(); wincheck()" ></button>
+		<button id="button5" class="testclass" onclick="press(this); bca4(); bcb5(); wincheck()" ></button><br>
+		</div>
+		<div class="flex-parent jc-center">
+		<button id="button6" class="testclass" onclick="press(this); bca1(); bcb2(); bcc1(); wincheck()" ></button>
+		<button id="button7" class="testclass" onclick="press(this); bca2(); bcb1(); bcb3(); bcc2(); wincheck()" ></button>
+		<button id="button8" class="testclass" onclick="press(this); bca3(); bcb2(); bcb4(); bcc3(); wincheck()" ></button>
+		<button id="button9" class="testclass" onclick="press(this); bca4(); bcb3(); bcb5(); bcc4(); wincheck()" ></button>
+		<button id="button10" class="testclass" onclick="press(this); bca5(); bcb4(); bcc5(); wincheck()" ></button><br>
+		</div>
+		<div class="flex-parent jc-center">
+		<button id="button11" class="testclass" onclick="press(this); bcb1(); bcc2(); bcd1(); wincheck()" ></button>
+		<button id="button12" class="testclass" onclick="press(this); bcb2(); bcc1(); bcc3(); bcd2(); wincheck()" ></button>
+		<button id="button13" class="testclass" onclick="press(this); bcb3(); bcc2(); bcc4(); bcd3(); wincheck()" ></button>
+		<button id="button14" class="testclass" onclick="press(this); bcb4(); bcc3(); bcc5(); bcd4(); wincheck()" ></button>
+		<button id="button15" class="testclass" onclick="press(this); bcb5(); bcc4(); bcd5(); wincheck()" ></button><br>
+		</div>
+		<div class="flex-parent jc-center">
+		<button id="button16" class="testclass" onclick="press(this); bcc1(); bcd2(); bce1(); wincheck()" ></button>
+		<button id="button17" class="testclass" onclick="press(this); bcc2(); bcd1(); bcd3(); bce2(); wincheck()" ></button>
+		<button id="button18" class="testclass" onclick="press(this); bcc3(); bcd2(); bcd4(); bce3(); wincheck()" ></button>
+		<button id="button19" class="testclass" onclick="press(this); bcc4(); bcd3(); bcd5(); bce4(); wincheck()" ></button>
+		<button id="button20" class="testclass" onclick="press(this); bcc5(); bcd4(); bce5(); wincheck()" ></button><br>
+		</div>
+		<div class="flex-parent jc-center">
+		<button id="button21" class="testclass" onclick="press(this); bcd1(); bce2(); wincheck()" ></button>
+		<button id="button22" class="testclass" onclick="press(this); bcd2(); bce1(); bce3(); wincheck()" ></button>
+		<button id="button23" class="testclass" onclick="press(this); bcd3(); bce2(); bce4(); wincheck()" ></button>
+		<button id="button24" class="testclass" onclick="press(this); bcd4(); bce3(); bce5(); wincheck()" ></button>
+		<button id="button25" class="testclass" onclick="press(this); bcd5(); bce4(); wincheck();" ></button><br>
+		</div>
+		</div>
+		<div id="rightbox">
+		<p>Your goal is to get all of the Josiahs drinking :) <br> Click on any Josiah to make him, and all adjacent Josiahs start/stop drinking</p>
+		</div>
+		</div>
+		<div class="winpopup" id="winpopup">
+			<div class="winpopup-header">
+				<div class="title" style="color: White; font-family: fantasy">
+					Congrats!
+				</div>
+				<button class="close-button" onclick="closewinpopup();">&times;</button>
+			</div>
+			<div class="winpopup-body" style="color: White; font-family: 'Brush Script MT', cursive; font-size: 35px">
+				Time: <span id ="timevar"></span> seconds <br><br>
+				Move count: <span id="movevar"></span> moves <br><br>
+				Grade: <span id="finalscore"></span> <br>
+			</div>
+		</div>
+		<div id="overlay"></div>
+		<script src="LOJ.js"></script>
+	</body>
+</html>
