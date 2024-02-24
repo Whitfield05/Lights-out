@@ -61,3 +61,64 @@ body {
 	width: 24%;
 	float: left;
 }
+.winpopup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	border-radius: 10px;
+	z-index: 10;
+	background-image: url(Chalkboard.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 500px;
+	height: 400px;
+	max-width: 80%;
+	max-height: 80%;
+}
+.winpopup.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.winpopup-header {
+	padding:  10px 15px;
+	display: flex;
+	justify-content: space-between;
+}
+.title {
+	margin-left: 45%;
+	position: relative;
+}
+.title {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+.winpopup-header .close-button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.winpopup-body {
+	padding: 10px 15px;
+}
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .5);
+	pointer-events: none;
+	transition: 200ms ease-in-out
+}
+#overlay.active {
+	pointer-events: all;
+	opacity: 1;
+}

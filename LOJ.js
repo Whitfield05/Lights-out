@@ -1,8 +1,6 @@
-let moves = 0;
-let seconds = 0;
+moves = 0;
+seconds = 0;
 var WinAudio = new Audio('BOJwinsound.mp3');
-document.getElementById("timevar").innerHTML = seconds;
-document.getElementById("movevar").innerHTML = moves;
 var stopt = setInterval(timer2, 1000);
 function timer2(){
 	//timer
@@ -25,13 +23,85 @@ function wincheck() {
 	var buttonswin = document.getElementsByClassName('drunk');
 	if (buttonswin.length === 25){
 		WinAudio.play();
-		alert("YOU WIN!");
+		openwinpopup();
+		clearInterval(stopt);
+		grade();
 	}
 }
+function openwinpopup() {
+	document.getElementById("winpopup").classList.add('active');
+	document.getElementById("overlay").classList.add('active');
+}
+function closewinpopup() {
+	document.getElementById("winpopup").classList.remove('active');
+	document.getElementById("overlay").classList.remove('active');
+}
+function grade() {
+	var calcmoves, calcseconds, calcscore, finalscore;
+	if (moves === 13){
+		calcmoves = 5;
+	}
+	else if (moves <= 15){
+		calcmoves = 4;
+	}
+	else if (moves <= 18){
+		calcmoves = 3;
+	}
+	else if (moves <= 23){
+		calcmoves = 2;
+	}
+	else if (moves <= 28){
+		calcmoves = 1;
+	}
+	else if (moves > 28){
+		calcmoves = 0;
+	}
+	if (seconds <= 5){
+		calcseconds = 5;
+	}
+	else if (seconds <= 10){
+		calcseconds = 4;
+	}
+	else if (seconds <= 15){
+		calcseconds = 3;
+	}
+	else if (seconds <= 30){
+		calcseconds = 2;
+	}
+	else if (seconds <= 60){
+		calcseconds = 1;
+	}
+	else if (seconds >= 61){
+		calcseconds = 0;
+	}
+	calcscore = calcmoves + calcseconds;
+	if (calcscore >= 9.5){
+		finalscore = 'A++';
+	}
+	else if (calcscore >= 8.5){
+		finalscrore = 'A+';
+	}
+	else if (calcscore >=7){
+		finalscore = 'A';
+	}
+	else if (calcscore >=5){
+		finalscore = 'B';
+	}
+	else if (calcscore >=3){
+		finalscore = 'C';
+	}
+	else if (calcscore >=1){
+		finalscore = 'D';
+	}
+	else if (calcscore <=0){
+		finalscore = 'F';
+	}
+	document.getElementById("finalscore").innerHTML = finalscore; 
+} 
 function startgame() {
 	//timer and move count
 	moves = -13;
-	seconds = -1;
+	seconds -0;
 	document.getElementById("movevar").innerHTML = moves;
 	document.getElementById("timevar").innerHTML = seconds;
 	timer2();
